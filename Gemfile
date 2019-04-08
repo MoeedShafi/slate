@@ -1,5 +1,6 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
+ruby "2.4.4"
 source 'http://rubygems.org'
 
 gem "rouge", "1.7.2"
