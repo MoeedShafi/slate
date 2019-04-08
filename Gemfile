@@ -28,15 +28,3 @@ end
 gem "rake", "~> 10.4.0"
 
 gem 'therubyracer', :platforms => :ruby
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
