@@ -19,80 +19,92 @@ search: true
 
 # Introduction
 
-Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.
+Givvor is free, safe and secure. No ads, third-party access to data or spam. All you need to support you philanthropic efforts in one place.
 
-We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.
+Join others making a difference
 
-This example API documentation page was created with [Slate](https://github.com/lord/slate). Feel free to edit it and use it as a base for your own API's documentation.
+Safely support your favorite nonprofits
+- One place to contribute to all the causes you care about
+- Be in the drivers seat for change
+
+Discover additional worthy causes
+- Live stream of who is giving to which nonprofits
+- Insights into other nonprofits based on like-minded Givvors
+
+Build communities of supporters
+- Connect with other Givvors
+- Each nonprofit has its own dedicated community
+Don’t just be a donor, be a GIVVOR!
+
 
 # Authentication
 
 > To authorize, use this code:
 
 ```ruby
-require 'kittn'
+require 'Givvor'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
+api = Givvor::APIClient.authorize!('donatedonatedonate')
 ```
 
 ```python
-import kittn
+import Givvor
 
-api = kittn.authorize('meowmeowmeow')
+api = Givvor.authorize('donatedonatedonate')
 ```
 
 ```shell
 # With shell, you can just pass the correct header with each request
 curl "api_endpoint_here"
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: donatedonatedonate"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const Givvor = require('Givvor');
 
-let api = kittn.authorize('meowmeowmeow');
+let api = Givvor.authorize('donatedonatedonate');
 ```
 
-> Make sure to replace `meowmeowmeow` with your API key.
+> Make sure to replace `donatedonatedonate` with your API key.
 
-Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our [developer portal](http://example.com/developers).
+Givvor uses API keys to allow access to the API. You can register a new Givvor API key at our [developer portal](http://example.com/developers).
 
-Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:
+Givvor expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: meowmeowmeow`
+`Authorization: donatedonatedonate`
 
 <aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
+You must replace <code>donatedonatedonate</code> with your personal API key.
 </aside>
 
-# Kittens
+# Givvor
 
-## Get All Kittens
+## Get All Givvor
 
 ```ruby
-require 'kittn'
+require 'Givvor'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get
+api = Givvor::APIClient.authorize!('donatedonatedonate')
+api.Givvor.get
 ```
 
 ```python
-import kittn
+import Givvor
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get()
+api = Givvor.authorize('donatedonatedonate')
+api.Givvor.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens"
-  -H "Authorization: meowmeowmeow"
+curl "http://example.com/api/Givvor"
+  -H "Authorization: donatedonatedonate"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const Givvor = require('Givvor');
 
-let api = kittn.authorize('meowmeowmeow');
-let kittens = api.kittens.get();
+let api = Givvor.authorize('donatedonatedonate');
+let Givvor = api.Givvor.get();
 ```
 
 > The above command returns JSON structured like this:
@@ -116,49 +128,49 @@ let kittens = api.kittens.get();
 ]
 ```
 
-This endpoint retrieves all kittens.
+This endpoint retrieves all Givvor.
 
 ### HTTP Request
 
-`GET http://example.com/api/kittens`
+`GET http://example.com/api/Givvor`
 
 ### Query Parameters
 
 Parameter | Default | Description
 --------- | ------- | -----------
 include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include kittens that have already been adopted.
+available | true | If set to false, the result will include Givvor that have already been adopted.
 
 <aside class="success">
-Remember — a happy kitten is an authenticated kitten!
+Remember — a happy Givvor is an authenticated Givvor!
 </aside>
 
-## Get a Specific Kitten
+## Get a Specific Givvor
 
 ```ruby
-require 'kittn'
+require 'Givvor'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.get(2)
+api = Givvor::APIClient.authorize!('donatedonatedonate')
+api.Givvor.get(2)
 ```
 
 ```python
-import kittn
+import Givvor
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.get(2)
+api = Givvor.authorize('donatedonatedonate')
+api.Givvor.get(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
-  -H "Authorization: meowmeowmeow"
+curl "http://example.com/api/Givvor/2"
+  -H "Authorization: donatedonatedonate"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const Givvor = require('Givvor');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.get(2);
+let api = Givvor.authorize('donatedonatedonate');
+let max = api.Givvor.get(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -173,47 +185,47 @@ let max = api.kittens.get(2);
 }
 ```
 
-This endpoint retrieves a specific kitten.
+This endpoint retrieves a specific Givvor.
 
 <aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
 
 ### HTTP Request
 
-`GET http://example.com/kittens/<ID>`
+`GET http://example.com/Givvor/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to retrieve
+ID | The ID of the Givvor to retrieve
 
-## Delete a Specific Kitten
+## Delete a Specific Givvor
 
 ```ruby
-require 'kittn'
+require 'Givvor'
 
-api = Kittn::APIClient.authorize!('meowmeowmeow')
-api.kittens.delete(2)
+api = Givvor::APIClient.authorize!('donatedonatedonate')
+api.Givvor.delete(2)
 ```
 
 ```python
-import kittn
+import Givvor
 
-api = kittn.authorize('meowmeowmeow')
-api.kittens.delete(2)
+api = Givvor.authorize('donatedonatedonate')
+api.Givvor.delete(2)
 ```
 
 ```shell
-curl "http://example.com/api/kittens/2"
+curl "http://example.com/api/Givvor/2"
   -X DELETE
-  -H "Authorization: meowmeowmeow"
+  -H "Authorization: donatedonatedonate"
 ```
 
 ```javascript
-const kittn = require('kittn');
+const Givvor = require('Givvor');
 
-let api = kittn.authorize('meowmeowmeow');
-let max = api.kittens.delete(2);
+let api = Givvor.authorize('donatedonatedonate');
+let max = api.Givvor.delete(2);
 ```
 
 > The above command returns JSON structured like this:
@@ -225,15 +237,15 @@ let max = api.kittens.delete(2);
 }
 ```
 
-This endpoint deletes a specific kitten.
+This endpoint deletes a specific Givvor.
 
 ### HTTP Request
 
-`DELETE http://example.com/kittens/<ID>`
+`DELETE http://example.com/Givvor/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the kitten to delete
+ID | The ID of the Givvor to delete
 
