@@ -1,25 +1,3 @@
-Skip to content
-
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@MoeedShafi
-0
-1 16,307 hone/slate
-forked from lord/slate
- Code  Pull requests 0  Projects 0  Wiki  Insights
-slate
-/
-Gemfile
-@swarzech swarzech fixed the rouge gem to fixed an issue with the language tabs
-ddf0346 on 15 Jan 2015
-@lord @swarzech
-30 lines (20 sloc)  661 Bytes
-
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
 source 'http://rubygems.org'
