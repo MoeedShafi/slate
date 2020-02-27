@@ -388,8 +388,8 @@ data = r.json()
         "group": "givvor group",
         "amount": "12",
         "description": "/GROUP donated $12.0 to GIVVOR GROUP",
-        "author": "/GROUP",
-        "author_img_url": "https://www.givvor.com/static/group.png",
+        "user": "/GROUP",
+        "user_img_url": "https://www.givvor.com/static/group.png",
         "date": "11/12/2019"
     },
     {
@@ -397,7 +397,7 @@ data = r.json()
         "amount": "14",
         "description": "@GIVVOR donated $14 to GIVVOR GROUP",
         "user": "@GIVVOR",
-        "author_img_url":  "https://www.givvor.com/static/group.png",
+        "user_img_url":  "https://www.givvor.com/static/group.png",
         "date": "11/12/2019"
     },
 ]
