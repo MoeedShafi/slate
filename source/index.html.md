@@ -3,9 +3,7 @@ title: API Reference
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
-  - ruby
   - python
-  - javascript
 
 toc_footers:
   - <a href='#'>Sign Up for a Developer Key</a>
@@ -41,98 +39,97 @@ Don’t just be a donor, be a GIVVOR!
 
 > To authorize, use this code:
 
-```ruby
-require 'Givvor'
-
-api = Givvor::APIClient.authorize!('donatedonatedonate')
-```
-
-```python
-import Givvor
-
-api = Givvor.authorize('donatedonatedonate')
-```
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl "api_endpoint_here"
-  -H "Authorization: donatedonatedonate"
+curl "http://givvor-dev.herokuapp.com/api/user/login"
+  -H "username: donatedonatedonate password:donatedonatedonate"
 ```
 
-```javascript
-const Givvor = require('Givvor');
+```python
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/api/user/login"
+ 
+PARAMS = {'username':donatedonatedonate , 'password':donatedonatedonate } 
 
-let api = Givvor.authorize('donatedonatedonate');
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+
 ```
 
-> Make sure to replace `donatedonatedonate` with your API key.
+> Make sure to replace `donatedonatedonate` with your username and password.
 
-Givvor uses API keys to allow access to the API. You can register a new Givvor API key at our [developer portal](http://example.com/developers).
+Givvor uses API keys to allow access to the API. You can register a new Givvor API key at our [developer portal](http://givvor-dev.herokuapp.com/login).
 
 Givvor expects for the API key to be included in all API requests to the server in a header that looks like the following:
 
-`Authorization: donatedonatedonate`
+`username: donatedonatedonate`
+`password: donatedonatedonate`
 
 <aside class="notice">
-You must replace <code>donatedonatedonate</code> with your personal API key.
+You must replace <code>donatedonatedonate</code> with your personal username and password.
 </aside>
 
 # Givvor
 
 ## Get All Givvor
 
-```ruby
-require 'Givvor'
-
-api = Givvor::APIClient.authorize!('donatedonatedonate')
-api.Givvor.get
-```
-
-```python
-import Givvor
-
-api = Givvor.authorize('donatedonatedonate')
-api.Givvor.get()
-```
-
 ```shell
-curl "http://example.com/api/Givvor"
+curl "http://givvor-dev.herokuapp.com/api/users/"
   -H "Authorization: donatedonatedonate"
 ```
 
-```javascript
-const Givvor = require('Givvor');
+```python
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/api/users/"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
 
-let api = Givvor.authorize('donatedonatedonate');
-let Givvor = api.Givvor.get();
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+  
 ```
+
 
 > The above command returns JSON structured like this:
 
 ```json
-[
-  {
-    "id": 1,
-    "name": "Fluffums",
-    "breed": "calico",
-    "fluffiness": 6,
-    "cuteness": 7
-  },
-  {
-    "id": 2,
-    "name": "Max",
-    "breed": "unknown",
-    "fluffiness": 5,
-    "cuteness": 10
-  }
-]
+{
+    "count": {int},
+    "next": "http://givvor-dev.herokuapp.com/api/users/?limit={int}&offset={int}",
+    "previous": null,
+    "results": [
+        {
+            "username": "givvor",
+            "first_name": "givvor",
+            "last_name": "givvor",
+            "profile": {
+                "bg_img": "https://www.givvor.com/static/at_user-icon.png",
+                "profile_img": "https://www.givvor.com/static/at_user-icon.png",
+            }
+        },
+        {
+            "username": "givvor",
+            "first_name": "givvor",
+            "last_name": "givvor",
+            "profile": {
+                "bg_img": "https://www.givvor.com/static/at_user-icon.png",
+                "profile_img": "https://www.givvor.com/static/at_user-icon.png",
+            }
+        }
+    ]
+}
 ```
 
 This endpoint retrieves all Givvor.
 
 ### HTTP Request
 
-`GET http://example.com/api/Givvor`
+`GET http://givvor-dev.herokuapp.com/api/users/`
 
 ### Query Parameters
 
@@ -147,51 +144,45 @@ Remember — a happy Givvor is an authenticated Givvor!
 
 ## Get a Specific Givvor
 
-```ruby
-require 'Givvor'
-
-api = Givvor::APIClient.authorize!('donatedonatedonate')
-api.Givvor.get(2)
-```
-
-```python
-import Givvor
-
-api = Givvor.authorize('donatedonatedonate')
-api.Givvor.get(2)
-```
-
 ```shell
-curl "http://example.com/api/Givvor/2"
+curl "http://givvor-dev.herokuapp.com/api/users/2/"
   -H "Authorization: donatedonatedonate"
 ```
 
-```javascript
-const Givvor = require('Givvor');
+```python
 
-let api = Givvor.authorize('donatedonatedonate');
-let max = api.Givvor.get(2);
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/api/users/2/"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
+
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+
 ```
+
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "name": "Max",
-  "breed": "unknown",
-  "fluffiness": 5,
-  "cuteness": 10
+  "username": "givvor",
+  "first_name": "givvor",
+  "last_name": "givvor",
+  "profile": {
+      "bg_img": "https://www.givvor.com/static/at_user-icon.png",
+      "profile_img": "https://www.givvor.com/static/at_user-icon.png",
+  }
 }
 ```
 
 This endpoint retrieves a specific Givvor.
 
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-
 ### HTTP Request
 
-`GET http://example.com/Givvor/<ID>`
+`GET http://givvor-dev.herokuapp.com/api/users/<ID>`
 
 ### URL Parameters
 
@@ -199,21 +190,13 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the Givvor to retrieve
 
+
+<aside class="warning">Do not expose your API token with any other person.</aside>
+
+
 ## Delete a Specific Givvor
 
-```ruby
-require 'Givvor'
 
-api = Givvor::APIClient.authorize!('donatedonatedonate')
-api.Givvor.delete(2)
-```
-
-```python
-import Givvor
-
-api = Givvor.authorize('donatedonatedonate')
-api.Givvor.delete(2)
-```
 
 ```shell
 curl "http://example.com/api/Givvor/2"
@@ -221,19 +204,24 @@ curl "http://example.com/api/Givvor/2"
   -H "Authorization: donatedonatedonate"
 ```
 
-```javascript
-const Givvor = require('Givvor');
+```python
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/api/users/2/delete/"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
 
-let api = Givvor.authorize('donatedonatedonate');
-let max = api.Givvor.delete(2);
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
 ```
+
 
 > The above command returns JSON structured like this:
 
 ```json
 {
-  "id": 2,
-  "deleted" : ":("
+  "msg" : "user succesfully deleted :("
 }
 ```
 
@@ -241,7 +229,7 @@ This endpoint deletes a specific Givvor.
 
 ### HTTP Request
 
-`DELETE http://example.com/Givvor/<ID>`
+`DELETE http://givvor-dev.herokuapp.com/api/users/<ID>/delete/`
 
 ### URL Parameters
 
