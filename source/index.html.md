@@ -244,3 +244,58 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the Givvor to delete
 
+# Givvor Groups
+
+## Get All Givvor Groups
+
+```shell
+curl "http://givvor-dev.herokuapp.com/api/groups/"
+  -H "Authorization: donatedonatedonate"
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/api/groups/"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
+
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "result": [
+        
+        {
+            "title": "GIVVOR GROUP TITLE",
+            "get_entity_display_image": "https://www.givvor.com/static/group.png",
+            "slug": "givvor-group-slug"
+        },
+        {
+            "title":  "GIVVOR GROUP TITLE",
+            "get_entity_display_image": "https://www.givvor.com/static/group.png",
+            "slug": "givvor-group-slug"
+        }
+    ]
+}
+```
+
+This endpoint retrieves all Givvor Groups.
+
+### HTTP Request
+
+`GET http://givvor-dev.herokuapp.com/api/groups/`
+
+### Query Parameters
+
+
+<aside class="success">
+Remember — a happy Givvor Groups is an Verified Givvor!
+</aside>
