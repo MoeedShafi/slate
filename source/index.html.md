@@ -60,6 +60,13 @@ data = r.json()
 ```
 
 > Make sure to replace `donatedonatedonate` with your username and password.
+> The above command returns JSON structured like this:
+
+```json
+{
+  "token": "donatedonatedonate",
+}
+```
 
 Givvor uses API keys to allow access to the API. You can register a new Givvor API key at our [developer portal](http://givvor-dev.herokuapp.com/login).
 
@@ -99,7 +106,7 @@ data = r.json()
 
 ```json
 {
-    "count": {int},
+    "count": "{int}",
     "next": "http://givvor-dev.herokuapp.com/api/users/?limit={int}&offset={int}",
     "previous": null,
     "results": [
@@ -135,8 +142,8 @@ This endpoint retrieves all Givvor.
 
 Parameter | Default | Description
 --------- | ------- | -----------
-include_cats | false | If set to true, the result will also include cats.
-available | true | If set to false, the result will include Givvor that have already been adopted.
+limit | 10 | To change the limit of result returned.
+offset | 10 | To change the starting point of result returned.
 
 <aside class="success">
 Remember — a happy Givvor is an authenticated Givvor!
