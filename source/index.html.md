@@ -356,6 +356,59 @@ This endpoint retrieves all Givvor Groups.
 ### Query Parameters
 
 
-<aside class="success">
-Remember — a happy Givvor Groups is an Verified Givvor Group!
-</aside>
+
+# Givvor Donations
+
+## Get User Givvor Donation
+
+```shell
+curl "http://givvor-dev.herokuapp.com/accounts/api/donations/"
+  -H "Authorization: donatedonatedonate"
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/accounts/api/donations/"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
+
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    {
+        "group": "givvor group",
+        "amount": "12",
+        "description": "/GROUP donated $12.0 to GIVVOR GROUP",
+        "author": "/GROUP",
+        "author_img_url": "https://www.givvor.com/static/group.png",
+        "date": "11/12/2019"
+    },
+    {
+        "group": "givvor group",
+        "amount": "14",
+        "description": "@GIVVOR donated $14 to GIVVOR GROUP",
+        "user": "@GIVVOR",
+        "author_img_url":  "https://www.givvor.com/static/group.png",
+        "date": "11/12/2019"
+    },
+]
+```
+
+This endpoint retrieves all Givvor Groups.
+
+### HTTP Request
+
+`GET http://givvor-dev.herokuapp.com/accounts/api/donations/`
+
+### Query Parameters
+
+
