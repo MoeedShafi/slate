@@ -297,5 +297,65 @@ This endpoint retrieves all Givvor Groups.
 
 
 <aside class="success">
-Remember — a happy Givvor Groups is an Verified Givvor!
+Remember — a happy Givvor Groups is an Verified Givvor Group!
+</aside>
+
+
+# Givvor Feed
+
+## Get User Givvor Feed
+
+```shell
+curl "http://givvor-dev.herokuapp.com/feed/api/stream/"
+  -H "Authorization: donatedonatedonate"
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/feed/api/stream/"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
+
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    {
+        "action_object_content_type": "givvor group",
+        "feed_type": "donation",
+        "liner": "/GROUP donated $12.0 to GIVVOR GROUP",
+        "author": "/GROUP",
+        "author_img_url": "https://www.givvor.com/static/group.png",
+        "time_since": "1 day, 1 hour"
+    },
+    {
+        "action_object_content_type": "givvor group",
+        "feed_type": "donation",
+        "liner": "@GIVVOR donated $14 to GIVVOR GROUP",
+        "author": "@GIVVOR",
+        "author_img_url":  "https://www.givvor.com/static/group.png",
+        "time_since": "1 day, 1 hour"
+    },
+]
+```
+
+This endpoint retrieves all Givvor Groups.
+
+### HTTP Request
+
+`GET http://givvor-dev.herokuapp.com/feed/api/stream/`
+
+### Query Parameters
+
+
+<aside class="success">
+Remember — a happy Givvor Groups is an Verified Givvor Group!
 </aside>
