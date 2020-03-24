@@ -412,3 +412,59 @@ This endpoint retrieves all Givvor Groups.
 ### Query Parameters
 
 
+## Donate
+
+```shell
+curl --data "api_key=api_key,......" "http://givvor-dev.herokuapp.com/tapi/donate/"
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-dev.herokuapp.com/tapi/donate/"
+
+data = {'api_key':api_key, 
+        .....................,
+        .....................,
+        .....................,
+        } 
+
+r = requests.post(url = URL, data = data) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{'response': 'Donation Successful'}
+```
+
+This endpoint Donates a specific amount to Givvor Group.
+
+### HTTP Request
+
+`POST http://givvor-dev.herokuapp.com/tapi/donate/`
+
+### Query Parameters
+
+
+Parameter | Description
+--------- | -----------
+amount | The amount a Givvor wants to donate
+message (optional) | The message a Givvor wants to give with this donations
+event_id (optional) | The ID of campign related to Group
+cc_number | Credit Card
+exp_month | Credit Card Expiry Month
+exp_year | Credit Card Expiry Year
+first_name | First name of the Givvor
+last_name | Last name of the Givvor
+address | Address of the Givvor
+city | City of the Givvor
+state | State of the Givvor
+zip | Zip of the Givvor
+fec_email | Email of the Givvor
+phone | Phone of the Givvor
+
