@@ -415,7 +415,10 @@ This endpoint retrieves all Givvor Groups.
 ## Donate
 
 ```shell
-curl --data "api_key=api_key,......" "http://givvor-dev.herokuapp.com/tapi/donate/"
+
+curl --data "api_key=api_key,......" 
+"http://givvor-dev.herokuapp.com/tapi/donate/"
+
 ```
 
 ```python
@@ -439,7 +442,9 @@ data = r.json()
 > The above command returns JSON structured like this:
 
 ```json
-{'response': 'Donation Successful'}
+{
+  'response': 'Donation Successful'
+}
 ```
 
 This endpoint Donates a specific amount to Givvor Group.
