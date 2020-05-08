@@ -473,3 +473,53 @@ zip | Zip of the Givvor
 fec_email | Email of the Givvor
 phone | Phone of the Givvor
 
+# Givvor Registry
+
+##Registry
+```shell
+curl "http://givvor-registry.herokuapp.com/api/registry/"
+  -H "Authorization: donatedonatedonate"
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-registry.herokuapp.com/api/registry"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
+
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+[
+    {
+        "need": "Masks",
+        "needed": "12",
+        "description": "need masks for patients",
+        "group": "Howard hospital college",
+        "date": "03/12/2020"
+    },
+    {
+        "need": "Lunches",
+        "needed": "150",
+        "description": "need Lunches for medical staff",
+        "group": "Howard hospital college",
+        "date": "04/12/2020-05/17/2020"
+    },
+]
+```
+
+This endpoint retrieves all  needs of Givvor Groups.
+
+### HTTP Request
+
+`GET http://givvor-registry.herokuapp.com/api/registry/`
+
+### Query Parameters
