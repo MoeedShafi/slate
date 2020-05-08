@@ -522,7 +522,7 @@ This endpoint retrieves all  needs of Givvor Groups.
 
 `GET http://givvor-registry.herokuapp.com/api/registry/`
 
-##Create need
+##Create Need
 
 ```shell
 
@@ -576,7 +576,7 @@ date2 | end date
 frequncy | Once OR Daily
 group_id | Givvor Group ID
 
-##Need details
+##Need Details
 ```shell
 curl "http://givvor-registry.herokuapp.com/api/need/<ID>/"
   -H "Authorization: donatedonatedonate"
@@ -613,3 +613,54 @@ This endpoint retrieves  a specific need of Givvor Groups.
 ### HTTP Request
 
 `GET http://givvor-registry.herokuapp.com/api/registry/`
+
+##fulfill Need
+
+```shell
+
+curl --data "api_key=api_key,......" 
+"http://givvor-registry.herokuapp.com/api/need/<ID>/fulfill_need/"
+
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-registry.herokuapp.com/api/need/<ID>/fulfill_need/"
+
+data = {'api_key':api_key, 
+        .....................,
+        .....................,
+        .....................,
+        } 
+
+r = requests.post(url = URL, data = data) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  'response': 'Created Successfully'
+}
+```
+
+This endpoint creates a fulfilment to a specific Need.
+
+### HTTP Request
+
+`POST http://givvor-registry.herokuapp.com/api/need/<ID>/fulfill_need/`
+
+### Query Parameters
+
+
+Parameter | Description
+--------- | -----------
+quantity | quantity providing per day
+amount |  cost of product
+date | date of delivery
+type | Donation OR Reimburse
