@@ -522,4 +522,94 @@ This endpoint retrieves all  needs of Givvor Groups.
 
 `GET http://givvor-registry.herokuapp.com/api/registry/`
 
+##Create need
+
+```shell
+
+curl --data "api_key=api_key,......" 
+"http://givvor-registry.herokuapp.com/api/create_need/"
+
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-registry.herokuapp.com/api/create_need/"
+
+data = {'api_key':api_key, 
+        .....................,
+        .....................,
+        .....................,
+        } 
+
+r = requests.post(url = URL, data = data) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  'response': 'Created Successfully'
+}
+```
+
+This endpoint creates a need to a specific Givvor Group.
+
+### HTTP Request
+
+`POST http://givvor-registry.herokuapp.com/api/create_need/`
+
 ### Query Parameters
+
+
+Parameter | Description
+--------- | -----------
+quantity | quantity required per day
+title |  name of need
+descrption | description of need
+date1 | start date
+date2 | end date
+frequncy | Once OR Daily
+group_id | Givvor Group ID
+
+##Need details
+```shell
+curl "http://givvor-registry.herokuapp.com/api/need/<ID>/"
+  -H "Authorization: donatedonatedonate"
+```
+
+```python
+import requests 
+  
+URL = "http://givvor-registry.herokuapp.com/api/need/<ID>/"
+ 
+PARAMS = {'Authorization':donatedonatedonate } 
+
+r = requests.get(url = URL, params = PARAMS) 
+
+data = r.json() 
+  
+```
+
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "need": "Masks",
+    "needed": "12",
+    "description": "need masks for patients",
+    "group": "Howard hospital college",
+    "date": "03/12/2020"
+}
+```
+
+This endpoint retrieves  a specific need of Givvor Groups.
+
+### HTTP Request
+
+`GET http://givvor-registry.herokuapp.com/api/registry/`
