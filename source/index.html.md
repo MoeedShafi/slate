@@ -612,7 +612,7 @@ This endpoint retrieves  a specific need of Givvor Groups.
 
 ### HTTP Request
 
-`GET http://givvor-registry.herokuapp.com/api/registry/`
+`GET http://givvor-registry.herokuapp.com/api/need/<ID>/`
 
 ##fulfill Need
 
